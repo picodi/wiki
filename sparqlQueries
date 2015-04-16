@@ -1,0 +1,49 @@
+
+// Landlocked Countries
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?population
+WHERE {
+    ?country a type:LandlockedCountries ;
+             rdfs:label ?name ;
+             prop:populationEstimate ?population .
+  
+    FILTER (?population > 15000000 &&
+            langMatches(lang(?name), "EN")) .
+} ORDER BY DESC(?population)
+
+
+
+
+// Mountains of Italy
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT *
+WHERE {
+    ?mountain a type:MountainsOfItaly;
+             rdfs:label ?name ;
+             dbpedia-owl:elevation ?elevation .
+
+    FILTER (?elevation > 4000 && langMatches(lang(?name), "EN")) .
+} ORDER BY DESC(?elevation)
+
+
+
+//long names of countries
+PREFIX o: <http://dbpedia.org/ontology/>
+PREFIX p: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?name ?longName  
+WHERE {
+    ?country a o:Country ;
+             foaf:name ?name ;
+             p:conventionalLongName ?longName ;
+             p:populationEstimate ?population .
+    FILTER (?population > 55000000 &&
+            langMatches(lang(?name), "EN")) .
+} ORDER BY ?population (?longName) 
+LIMIT 1000 OFFSET 0
+

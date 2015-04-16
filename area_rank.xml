@@ -1,0 +1,214 @@
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="name"/>
+  <variable name="areaRank"/>
+  <variable name="pageid"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="name"><literal xml:lang="en">Switzerland</literal></binding>
+   <binding name="areaRank"><literal datatype="http://dbpedia.org/datatype/rod">133.0</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">26748</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Armenia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://dbpedia.org/datatype/stone">141.0</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">10918072</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Andorra</literal></binding>
+   <binding name="areaRank"><literal datatype="http://dbpedia.org/datatype/stone">191.0</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">600</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Afghanistan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://dbpedia.org/datatype/stone">41.0</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">737</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Kazakhstan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">9</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">16642</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Mongolia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19271</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Niger</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">22</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">21373</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Mali</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">24</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19127</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Ethiopia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">27</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">187749</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Bolivia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">28</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3462</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Zambia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">39</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">34415</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Central African Republic</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">45</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">5478</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Botswana</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">48</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3464</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Turkmenistan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">52</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">198149</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Uzbekistan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">31853</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Zimbabwe</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">60</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">34399</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Paraguay</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">60</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">23420</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Burkina Faso</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">74</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3470</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Laos</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">84</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">17752</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Belarus</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">85</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3457</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Kyrgyzstan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">86</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">170131</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Nepal</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">95</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">171166</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Tajikistan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">96</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">30108</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Malawi</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">99</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19088</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Hungary</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">109</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">13275</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Serbia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">113</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">29265</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Azerbaijan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">114</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">746</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Austria</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">115</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">26964606</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Czech Republic</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">116</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">5321</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Slovakia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">129</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">26830</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Bhutan</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">135</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">2421391</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Moldova</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">138</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19260</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Lesotho</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">140</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">17781</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Burundi</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">145</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">21490998</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Republic of Macedonia</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">148</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">23564616</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Rwanda</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">149</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25645</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Swaziland</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">157</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">27451</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Luxembourg</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">179</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">17515</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Liechtenstein</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">219</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">17810</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">San Marino</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">227</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">27248</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Vatican City</literal></binding>
+   <binding name="areaRank"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">249</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">32408</literal></binding>
+  </result>
+ </results>
+</sparql>

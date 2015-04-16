@@ -1,0 +1,184 @@
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="name"/>
+  <variable name="longName"/>
+  <variable name="pageid"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="name"><literal xml:lang="en">Taiwan</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of China</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25734</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Zhōnghuá Mínguó</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of China</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25734</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Taiwan</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of China</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25734</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Zhōnghuá Mínguó</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of China</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25734</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Basque Country</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Basque Country</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">683036</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Euskal Herria</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Basque Country</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">683036</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Kerguelen Islands</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Kerguelen Islands</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">17125</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Kerguelen Islands</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Kerguelen Islands</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">17125</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">the Australian Antarctic Territory</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Australian Antarctic Territory</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">242046</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Italy</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Italian Republic</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">14532</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Myanmar</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of the Union of Myanmar</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19457</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Pyidaunzu Thanmăda Myăma Nainngandaw</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of the Union of Myanmar</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">19457</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">the United Kingdom</literal></binding>
+   <binding name="longName"><literal xml:lang="en">United Kingdom of Great Britain and Northern Ireland</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">31717</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Thailand</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Kingdom of Thailand</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">30128</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Ratcha Anachak Thai</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Kingdom of Thailand</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">30128</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Turkey</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Republic of Turkey</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">11125639</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Iran</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Islamic Republic of Iran</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">14653</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Jomhuri-ye Eslāmi-ye Irān</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Islamic Republic of Iran</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">14653</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">the Democratic Republic of the Congo</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Democratic Republic of the Congo</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">76762</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Germany</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Federal Republic of Germany</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">11867</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Vietnam</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Socialist Republic of Vietnam</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">202354</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Ethiopia</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Federal Democratic Republic of Ethiopia</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">187749</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Mexico</literal></binding>
+   <binding name="longName"><literal xml:lang="en">United Mexican States</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3966054</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Japan</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Japan</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">15573</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Nippon-koku Nihon-koku</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Japan</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">15573</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Russia</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Russian Federation</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25391</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Rossiyskaya Federatsiya</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Russian Federation</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25391</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Российская Федерация</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Russian Federation</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">25391</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Bangladesh</literal></binding>
+   <binding name="longName"><literal xml:lang="en">People&#39;s Republic of Bangladesh</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3454</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">()</literal></binding>
+   <binding name="longName"><literal xml:lang="en">People&#39;s Republic of Bangladesh</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3454</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Pakistan</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Islamic Republic of Pakistan</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">23235</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Brazil</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Federative Republic of Brazil</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3383</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Содружество Независимых Государств (СНГ)</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Commonwealth of Independent States</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">36870</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">the People&#39;s Republic of China</literal></binding>
+   <binding name="longName"><literal xml:lang="en">People&#39;s Republic of China</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">5405</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">OIC</literal></binding>
+   <binding name="longName"><literal xml:lang="en">Organisation of Islamic Cooperation</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">47725</literal></binding>
+  </result>
+ </results>
+</sparql>

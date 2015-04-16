@@ -1,0 +1,100 @@
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="name"/>
+  <variable name="elevation"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="name"><literal xml:lang="en">Mont Blanc de Courmayeur</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4748.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Nordend</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4609.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Zumsteinspitze</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4563.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Signalkuppe</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4554.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Lyskamm</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4527.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Western Lyskamm</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4479.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Matterhorn</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4478.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Mont Maudit</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4465.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Parrotspitze</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4432.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Ludwigshöhe (mountain)</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4341.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Dôme du Goûter</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4304.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Castor (mountain)</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4228.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Grandes Jorasses</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4208.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Picco Muzio</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4187.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Dent d&#39;Hérens</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4171.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Breithorn</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4164.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Central Breithorn</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4159.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Eastern Breithorn</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4139.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Breithornzwillinge</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4106.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Pollux (mountain)</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4092.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">La Spedla</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4020.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Dent du Géant</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4013.0</literal></binding>
+  </result>
+  <result>
+   <binding name="name"><literal xml:lang="en">Aiguille de Rochefort</literal></binding>
+   <binding name="elevation"><literal datatype="http://www.w3.org/2001/XMLSchema#double">4001.0</literal></binding>
+  </result>
+ </results>
+</sparql>

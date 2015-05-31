@@ -1,0 +1,120 @@
+<?xml version="1.1" ?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/sw/DataAccess/rf1/result2.xsd">
+ <head>
+  <variable name="capitalName"/>
+  <variable name="capitalPop"/>
+  <variable name="pageid"/>
+ </head>
+ <results distinct="false" ordered="true">
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Addis Ababa</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3384569</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">52593</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Tashkent</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">2309300</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">57533</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Lilongwe</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">978700</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">57030</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Ouagadougou</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1626950</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56100</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Lusaka</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">3100000</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">23149963</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Harare</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1606000</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56680</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Kigali</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1132686</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56690</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Budapest Főváros</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1740041</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">36787</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Capital City of Budapest</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1740041</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">36787</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Baku</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">2122300</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">4566</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Minsk</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">1921807</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">51593</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Bujumbura</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">497166</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56631</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Dushanbe</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">747500</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56658</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Asunción</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">542023</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56836</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Bishkek</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">874400</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">4554</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Bangui</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">734350</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56617</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Chișinău</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">674500</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56635</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Gaborone</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">231626</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">56664</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Maseru</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">227880</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">57047</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">City of Skopje</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">506926</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">29618</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Град Скопје</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">506926</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">29618</literal></binding>
+  </result>
+  <result>
+   <binding name="capitalName"><literal xml:lang="en">Thimphu</literal></binding>
+   <binding name="capitalPop"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">79185</literal></binding>
+   <binding name="pageid"><literal datatype="http://www.w3.org/2001/XMLSchema#integer">57658</literal></binding>
+  </result>
+ </results>
+</sparql>

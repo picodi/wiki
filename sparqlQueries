@@ -47,3 +47,55 @@ WHERE {
 } ORDER BY ?population (?longName) 
 LIMIT 1000 OFFSET 0
 
+
+// Capital Name
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?capitalName ?pageid
+WHERE {
+    ?country a type:LandlockedCountries ;
+             rdfs:label ?name ;
+             prop:populationEstimate ?population ;
+             dbpedia-owl:capital ?capital ;
+             dbpedia-owl:wikiPageID ?pageid.
+             ?capital dbpprop:officialName ?capitalName.
+  
+    FILTER (?population > 150000 &&
+            langMatches(lang(?name), "EN")) .
+} ORDER BY DESC(?population)
+
+
+// Area Rank
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?pageid ?arearank
+WHERE {
+    ?country a type:LandlockedCountries ;
+             rdfs:label ?name ;
+             dbpedia-owl:capital ?capital ;
+             dbpedia-owl:wikiPageID ?pageid ;
+             dbpprop:areaRank ?arearank.
+  
+    FILTER (?arearank > 0 && ?arearank < 100 &&
+            langMatches(lang(?name), "EN")) .
+} ORDER BY ASC(?arearank)
+
+
+//Population of capital
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?capitalName ?capitalPop ?pageid
+WHERE {
+    ?country a type:LandlockedCountries ;
+             prop:populationEstimate ?population ;
+             dbpedia-owl:capital ?capital .
+             ?capital dbpprop:officialName ?capitalName ;
+                 dbpedia-owl:wikiPageID ?pageid;
+                 dbpedia-owl:populationTotal ?capitalPop.
+  
+    FILTER (?population > 150000 &&
+            langMatches(lang(?capitalName), "EN")) .
+} ORDER BY DESC(?population)

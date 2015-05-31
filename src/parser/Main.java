@@ -1,6 +1,7 @@
 package parser;
 
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,7 +13,7 @@ public class Main
         ArrayList<WikiParamSet> list = parser.parse();
 
         UrlExtractor extractor = new UrlExtractor();
-        JGet getter = new JGet();
+        WikiSearch getter = new WikiSearch();
         ArrayList<String> results = new ArrayList<>();
         for (WikiParamSet set : list) {
             if (set.getKeyword1().compareTo(set.getKeyword2()) != 0) {
@@ -21,12 +22,17 @@ public class Main
             }
         }
 
+        try {
+            PrintWriter writer = new PrintWriter("custom-result.txt", "UTF-8");
+            for (String s : results) {
+                writer.println(s);
+                writer.println();
+            }
+            writer.close();
 
-        System.out.println("results: ");
-        for (String s : results) {
-            System.out.println(s);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 
     public static void printMap(HashMap<String, String> map)

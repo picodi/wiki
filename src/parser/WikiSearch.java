@@ -4,13 +4,13 @@ import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 
-public class JGet
+public class WikiSearch
 {
     public static final String DEFAULT_URL = "name";
     public static final String MESSAGE_NO_SENTENCE_MATCH = "Both keywords were not found in same sentence";
     private String url = "";
 
-    public JGet()
+    public WikiSearch()
     {}
 
 
@@ -22,7 +22,7 @@ public class JGet
         if (url.compareTo("") == 0)
         {
             System.err.println( "No URL found for " + keyword1+ "\n" );
-            System.exit(1);
+            //System.exit(1);
             return finalResults;
         }
 

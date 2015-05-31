@@ -13,7 +13,7 @@ public class DbpediaParser
 {
     public static final String LABEL_NAME = "name";
     public static final String LABEL_PAGEID = "pageid";
-    public static final String DEFAULT_FILE = "population.xml";
+    public static final String DEFAULT_FILE = "xml/population.xml";
     private String filename;
 
     public DbpediaParser()
@@ -38,6 +38,11 @@ public class DbpediaParser
         return this.filename;
     }
 
+    /**
+     * Returns an array of parameters tuples, identified in the given XML
+     *
+     * @return
+     */
     public ArrayList<WikiParamSet> parse()
     {
         ArrayList<WikiParamSet> extractedParameters = new ArrayList<>();
@@ -74,13 +79,12 @@ public class DbpediaParser
                     if (resultData.getNodeType() == Node.ELEMENT_NODE) {
 
                         Element eElement = (Element) resultData;
-
                         if (eElement.getAttribute("name").compareTo(LABEL_NAME) == 0) {
-                            parameterSet.setKeyword1(resultData.getFirstChild().getTextContent());
+                            parameterSet.setKeyword1(getPackedContent(eElement));
                         } else if (eElement.getAttribute("name").compareTo(LABEL_PAGEID) == 0) {
-                            parameterSet.setPageId(resultData.getFirstChild().getTextContent());
+                            parameterSet.setPageId(getPackedContent(eElement));
                         } else {
-                            parameterSet.setKeyword2(resultData.getFirstChild().getTextContent());
+                            parameterSet.setKeyword2(getPackedContent(eElement));
                         }
                     }
                 }
@@ -96,6 +100,10 @@ public class DbpediaParser
         return extractedParameters;
     }
 
+    /**
+     * Prints the array of WikiParameters
+     * @param list
+     */
     public void printWikiparams(ArrayList<WikiParamSet> list)
     {
         System.out.println("Printing extracted keywords");
@@ -103,5 +111,22 @@ public class DbpediaParser
         for (WikiParamSet set : list) {
             System.out.println(set.getPageId() + ": " + set.getKeyword1() + " " + set.getKeyword2());
         }
+    }
+
+    /**
+     * Trims the content of an element, avoiding empty space related issues
+     *
+     * @param element
+     *
+     * @return
+     */
+    public String getPackedContent(Element element) {
+        if (element != null) {
+            String text = element.getTextContent();
+            if (text != null) {
+                return text.trim().replaceAll("\\s+", " ");
+            }
+        }
+        return "";
     }
 }

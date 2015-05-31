@@ -16,31 +16,18 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 public class DbpediaFetcher
 {
     public static final String SPARQL_SERVICE = "http://dbpedia.org/sparql";
-    public static final String PATH_TO_XMLS = "xml/";
+    public static final String STYLESHEET = "http://www.w3.org/TR/rdf-sparql-XMLres/result-to-html.xsl";
     public static final String EMPTY_RESULTS_SET = "-1";
+    public static final String PATH_TO_XMLS = "xml/";
 
-    static String sparqlQueryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        \n" +
-            "PREFIX type: <http://dbpedia.org/class/yago/>\n" +
-            "PREFIX prop: <http://dbpedia.org/property/>\n" +
-            "PREFIX db-owl: <http://dbpedia.org/ontology/>\n" +
-            "SELECT ?name ?pageid ?arearank\n" +
-            "WHERE {\n" +
-            "    ?country a type:LandlockedCountries ;\n" +
-            "             rdfs:label ?name ;\n" +
-            "             db-owl:capital ?capital ;\n" +
-            "             db-owl:wikiPageID ?pageid ;\n" +
-            "             prop:areaRank ?arearank.\n" +
-            "  \n" +
-            "    FILTER (?arearank > 0 && ?arearank < 100 &&\n" +
-            "            langMatches(lang(?name), \"EN\")) .\n" +
-            "} ORDER BY ASC(?arearank)";
-
-    public static void main(String[] args)
-    {
-        executeQuery(sparqlQueryString);
-    }
-
-    public static String executeQuery(String sparqlQuery)
+    /**
+     * Executes given query and saves the resulting XML in a file
+     *
+     * @param sparqlQuery
+     *
+     * @return String
+     */
+    public String executeQuery(String sparqlQuery)
     {
         Model model = ModelFactory.createDefaultModel();
         Query query = QueryFactory.create(sparqlQuery);
@@ -57,7 +44,7 @@ public class DbpediaFetcher
 
         try {
             FileOutputStream fop = new FileOutputStream(file);
-            ResultSetFormatter.outputAsXML(fop, results);
+            ResultSetFormatter.outputAsXML(fop, results, STYLESHEET);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -67,12 +54,29 @@ public class DbpediaFetcher
         return fileName;
     }
 
-    public static String getFilename()
+    /**
+     * Gives the relative path to where the data will be stored
+     *
+     * @return String
+     */
+    public String getFilename()
     {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss.SSS");
         Date now = new Date();
         String fileName = sdf.format(now);
 
+        return formatFilePath(fileName);
+    }
+
+    /**
+     * Returns the path for an XML, whose filename is given as a parameter
+     *
+     * @param fileName
+     *
+     * @return String
+     */
+    public String formatFilePath(String fileName)
+    {
         return PATH_TO_XMLS + fileName + ".xml";
     }
 

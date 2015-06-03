@@ -2,6 +2,7 @@ package parser;
 
 import java.io.*;
 import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class WikiSearch
@@ -28,16 +29,16 @@ public class WikiSearch
 
         URL u;
         InputStream inputStream = null;
-        DataInputStream dis;
+        BufferedReader in;
         String s;
 
         try {
             u = new URL(url);
             inputStream = u.openStream();
-            dis = new DataInputStream(new BufferedInputStream(inputStream));
+            in = new BufferedReader(new InputStreamReader(u.openStream(), StandardCharsets.UTF_8));
 
             boolean inBody = false;
-            while ((s = dis.readLine()) != null)
+            while ((s = in.readLine()) != null)
             {
                 inBody = isInBody(s, inBody);
 
@@ -86,21 +87,19 @@ public class WikiSearch
     public ArrayList<String> getSentancesContainingKeywords(String paragraph, String keyword1, String keyword2)
     {
         ArrayList<String> results = new ArrayList<>();
-        String[] split = removeHtmlTags(paragraph).split("\\. ");
+        String split = removeHtmlTags(paragraph);
 
-        for (int i = 0; i < split.length; i++) {
 
-            String current = split[i];
+            String current = split;
             if(current.contains(keyword1) && current.contains(keyword2)) {
                 results.add(current);
             }
-        }
 
         return results;
     }
 
     public String removeHtmlTags(String string)
     {
-        return string.replaceAll("(?s)<[^>]*>(\\s*<[^>]*>)*", "");
+        return string.replaceAll("<!--.*?-->", "").replaceAll("<[^>]+>", "");
     }
 }

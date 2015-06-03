@@ -22,67 +22,17 @@ public class Main
             "             db-owl:wikiPageID ?pageid ;\n" +
             "             prop:areaRank ?arearank.\n" +
             "  \n" +
-            "    FILTER (?arearank > 0 && ?arearank < 100 &&\n" +
+            "    FILTER (?arearank > 40 && ?arearank < 50 &&\n" +
             "            langMatches(lang(?name), \"EN\")) .\n" +
             "} ORDER BY ASC(?arearank)";
 
+    public static ApplicationCoordinator coordinator = new ApplicationCoordinator();
     public static void main(String[] args)
     {
-        DbpediaFetcher fetcher = new DbpediaFetcher();
-        String fileName = fetcher.executeQuery(sparqlQueryString);
-        try {
-            // if fetcher returns an empty result
-            if (fileName.compareTo(DbpediaFetcher.class.getDeclaredField("EMPTY_RESULTS_SET").get(null).toString()) == 0) {
-                if (DEBUG_MODE) {
-                    System.out.println("DbpediaFetcher result: empty");
-                }
-                return;
-            } else {
-                if (DEBUG_MODE) {
-                    System.out.println("DbpediaFetcher result: not empty");
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        coordinator.setDebugMode(DEBUG_MODE);
+        coordinator.executeQuery(sparqlQueryString);
 
-        DbpediaParser parser = new DbpediaParser(fileName);
-        ArrayList<WikiParamSet> list = parser.parse();
-
-
-        if (DEBUG_MODE) {
-            System.out.println("No. results from DbpediaParser: " + list.size());
-        }
-
-        UrlExtractor extractor = new UrlExtractor();
-        WikiSearch getter = new WikiSearch();
-        ArrayList<String> results = new ArrayList<>();
-        for (WikiParamSet set : list) {
-
-            if (set.getKeyword1().compareTo(set.getKeyword2()) != 0) {
-                String page = extractor.getUrlForPageId(set.getPageId());
-
-                if (DEBUG_MODE) {
-                    System.out.println("Searching patterns on: " + page);
-                }
-                results.addAll(getter.getData(page, set.getKeyword1(), set.getKeyword2()));
-            }
-        }
-
-        if (DEBUG_MODE) {
-            System.out.println("No. results from WikiSearch: " + results.size());
-        }
-        try {
-            PrintWriter writer = new PrintWriter("custom-result.txt", "UTF-8");
-            for (String s : results) {
-                writer.println(s);
-                writer.println();
-            }
-            writer.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        System.out.println("end");
     }
 
     public static void printMap(HashMap<String, String> map)

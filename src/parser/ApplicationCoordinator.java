@@ -31,7 +31,7 @@ public class ApplicationCoordinator
             // if fetcher returns an empty result
             if (fileName.compareTo(DbpediaFetcher.class.getDeclaredField("EMPTY_RESULTS_SET").get(null).toString()) == 0) {
                 if (debugMode) {
-                    System.out.println("DbpediaFetcher result: empty");
+                    System.err.println("DbpediaFetcher result: empty");
                 }
                 return;
             } else {
@@ -68,7 +68,7 @@ public class ApplicationCoordinator
             System.out.println("No. results from WikiSearch: " + results.size());
         }
 
-        printInFile("custom-result.txt", results);
+        printInFile("wiki-rank.txt", results);
     }
 
     public void printInFile(String filename, ArrayList<String> data)

@@ -23,7 +23,6 @@ public class WikiSearch
         if (url.compareTo("") == 0)
         {
             System.err.println( "No URL found for " + keyword1+ "\n" );
-            //System.exit(1);
             return finalResults;
         }
 
@@ -87,13 +86,11 @@ public class WikiSearch
     public ArrayList<String> getSentancesContainingKeywords(String paragraph, String keyword1, String keyword2)
     {
         ArrayList<String> results = new ArrayList<>();
-        String split = removeHtmlTags(paragraph);
+        String trimed = removeHtmlTags(paragraph);
 
-
-            String current = split;
-            if(current.contains(keyword1) && current.contains(keyword2)) {
-                results.add(current);
-            }
+        if(trimed.contains(keyword1) && trimed.contains(keyword2)) {
+            results.add(trimed);
+        }
 
         return results;
     }

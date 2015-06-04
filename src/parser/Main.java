@@ -14,15 +14,16 @@ public class Main
             "PREFIX type: <http://dbpedia.org/class/yago/>\n" +
             "PREFIX prop: <http://dbpedia.org/property/>\n" +
             "PREFIX db-owl: <http://dbpedia.org/ontology/>\n" +
+            "PREFIX dbo: <http://dbpedia.org/ontology/> \n" +
             "SELECT ?name ?pageid ?arearank\n" +
             "WHERE {\n" +
-            "    ?country a type:LandlockedCountries ;\n" +
+            "    ?country a dbo:Country ;\n" +
             "             rdfs:label ?name ;\n" +
             "             db-owl:capital ?capital ;\n" +
             "             db-owl:wikiPageID ?pageid ;\n" +
             "             prop:areaRank ?arearank.\n" +
             "  \n" +
-            "    FILTER (?arearank > 40 && ?arearank < 50 &&\n" +
+            "    FILTER (?arearank > 0 && ?arearank < 10 &&\n" +
             "            langMatches(lang(?name), \"EN\")) .\n" +
             "} ORDER BY ASC(?arearank)";
 

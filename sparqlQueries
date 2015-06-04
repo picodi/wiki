@@ -99,3 +99,21 @@ WHERE {
     FILTER (?population > 150000 &&
             langMatches(lang(?capitalName), "EN")) .
 } ORDER BY DESC(?population)
+
+
+// Area Rank 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?name ?pageid ?arearank
+WHERE {
+    ?country a dbo:Country ;
+             rdfs:label ?name ;
+             dbpedia-owl:capital ?capital ;
+             dbpedia-owl:wikiPageID ?pageid ;
+             dbpprop:areaRank ?arearank.
+  
+    FILTER (?arearank > 0 && ?arearank < 100 &&
+            langMatches(lang(?name), "EN")) .
+} ORDER BY ASC(?arearank)

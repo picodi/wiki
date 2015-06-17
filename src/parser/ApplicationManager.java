@@ -4,7 +4,7 @@ package parser;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class ApplicationCoordinator
+public class ApplicationManager
 {
 
     private boolean debugMode;
@@ -12,14 +12,14 @@ public class ApplicationCoordinator
     private DbpediaFetcher fetcher = new DbpediaFetcher();
     private DbpediaParser parser = new DbpediaParser();
     private UrlExtractor extractor = new UrlExtractor();
-    private WikiSearch wikiSearch = new WikiSearch();
+    private WikiParser wikiSearch = new WikiParser();
 
-    public ApplicationCoordinator()
+    public ApplicationManager()
     {
         setDebugMode(false);
     }
 
-    public ApplicationCoordinator(boolean debugMode)
+    public ApplicationManager(boolean debugMode)
     {
         setDebugMode(debugMode);
     }
@@ -42,7 +42,9 @@ public class ApplicationCoordinator
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("==============================================");
 
+        System.out.println(fileName);
         parser.setFilename(fileName);
         ArrayList<WikiParamSet> list = parser.parse();
 
@@ -65,7 +67,7 @@ public class ApplicationCoordinator
         }
 
         if (debugMode) {
-            System.out.println("No. results from WikiSearch: " + results.size());
+            System.out.println("No. results from WikiParser: " + results.size());
         }
 
         printInFile("wiki-rank.txt", results);
@@ -118,12 +120,12 @@ public class ApplicationCoordinator
         this.extractor = extractor;
     }
 
-    public WikiSearch getWikiSearch()
+    public WikiParser getWikiSearch()
     {
         return wikiSearch;
     }
 
-    public void setWikiSearch(WikiSearch wikiSearch)
+    public void setWikiSearch(WikiParser wikiSearch)
     {
         this.wikiSearch = wikiSearch;
     }

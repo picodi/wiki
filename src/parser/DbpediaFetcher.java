@@ -18,7 +18,7 @@ public class DbpediaFetcher
     public static final String SPARQL_SERVICE = "http://dbpedia.org/sparql";
     public static final String STYLESHEET = "http://www.w3.org/TR/rdf-sparql-XMLres/result-to-html.xsl";
     public static final String EMPTY_RESULTS_SET = "-1";
-    public static final String PATH_TO_XMLS = "xml/";
+    public static final String PATH_TO_XMLS = "dbpedia_results/";
 
     /**
      * Executes given query and saves the resulting XML in a file

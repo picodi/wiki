@@ -5,13 +5,13 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-public class WikiSearch
+public class WikiParser
 {
     public static final String DEFAULT_URL = "name";
     public static final String MESSAGE_NO_SENTENCE_MATCH = "Both keywords were not found in same sentence";
     private String url = "";
 
-    public WikiSearch()
+    public WikiParser()
     {}
 
 
@@ -42,7 +42,11 @@ public class WikiSearch
                 inBody = isInBody(s, inBody);
 
                 if (inBody) {
-                    String tempString = wikiTrimmer.trimString(s);
+                    String tempString = removeHtmlTags(wikiTrimmer.trimString(s));
+
+                    if (tempString.compareTo("") == 0)
+                        continue;
+
                     if (tempString.contains(keyword1) && tempString.contains(keyword2)) {
                         finalResults.addAll(getSentancesContainingKeywords(tempString, keyword1, keyword2));
                     }
@@ -72,11 +76,11 @@ public class WikiSearch
 
     public boolean isInBody(String s, boolean inBody)
     {
-        if (s.contains("<body")) {
+        if (s.contains("mw-content-text")) {
             return true;
         }
 
-        if (s.contains("</body")) {
+        if (s.contains("id=\"See_also\"")) {
             return false;
         }
 
@@ -86,10 +90,9 @@ public class WikiSearch
     public ArrayList<String> getSentancesContainingKeywords(String paragraph, String keyword1, String keyword2)
     {
         ArrayList<String> results = new ArrayList<>();
-        String trimed = removeHtmlTags(paragraph);
 
-        if(trimed.contains(keyword1) && trimed.contains(keyword2)) {
-            results.add(trimed);
+        if(paragraph.contains(keyword1) && paragraph.contains(keyword2)) {
+            results.add(paragraph);
         }
 
         return results;

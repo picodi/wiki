@@ -32,12 +32,19 @@ public class ApplicationManager
     {
         String fileName = fetcher.executeQuery(query);
         try {
-            // if fetcher returns an empty result
+
+            if (fileName.compareTo(DbpediaFetcher.class.getDeclaredField("BAD_CONNECTION").get(null).toString()) == 0) {
+                return "Bad connection.";
+            }
+            if (fileName.compareTo(DbpediaFetcher.class.getDeclaredField("INCORRECT_QUERY").get(null).toString()) == 0) {
+                return "Incorrect Query. Check the syntax.";
+            }
+                // if fetcher returns an empty result
             if (fileName.compareTo(DbpediaFetcher.class.getDeclaredField("EMPTY_RESULTS_SET").get(null).toString()) == 0) {
                 if (debugMode) {
                     System.err.println("DbpediaFetcher result: empty");
                 }
-                return "";
+                return "DbpediaFetcher result: empty.";
             } else {
                 if (debugMode) {
                     System.out.println("DbpediaFetcher result: not empty");

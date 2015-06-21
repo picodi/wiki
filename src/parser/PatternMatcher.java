@@ -84,7 +84,9 @@ public class PatternMatcher
 
             String[] anns = {"Sentence"};
             Out.prln("Printing rezults");
-            return printResults(anns);
+            String results = printResults(anns);
+            printInFile("testDeRezultatFinal.txt", results);
+            return results;
             //Out.prln("Done printing rezults");
         }
         catch(Exception e)

@@ -30,7 +30,7 @@ public class ApplicationView extends JPanel implements ActionListener
             "             db-owl:wikiPageID ?pageid ;\n" +
             "             prop:areaRank ?arearank.\n" +
             "  \n" +
-            "    FILTER (?arearank > 30 && ?arearank < 40 &&\n" +
+            "    FILTER (?arearank > 30 && ?arearank < 50 &&\n" +
             "            langMatches(lang(?name), \"EN\")) .\n" +
             "} ORDER BY ASC(?arearank)";
 
@@ -39,18 +39,18 @@ public class ApplicationView extends JPanel implements ActionListener
     public ApplicationView()
     {
         setLayout(new FlowLayout());
-        setPreferredSize(new Dimension(600, 660));
+        setPreferredSize(new Dimension(820, 660));
 
         inputPanel = new JPanel();
         inputPanel.setLayout(new FlowLayout());
-        inputPanel.setPreferredSize(new Dimension(580, 320));
+        inputPanel.setPreferredSize(new Dimension(790, 320));
         inputPanel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEtchedBorder(), "Submit Query"));
 
 
         outputPanel = new JPanel();
         outputPanel.setLayout(new FlowLayout());
-        outputPanel.setPreferredSize(new Dimension(580, 320));
+        outputPanel.setPreferredSize(new Dimension(790, 320));
         outputPanel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEtchedBorder(), "Examine Result"));
 
@@ -58,12 +58,12 @@ public class ApplicationView extends JPanel implements ActionListener
         outputLabel = new JLabel("Output");
         submitButton = new JButton("Submit");
 
-        inputTextarea = new JTextArea(15, 50);
+        inputTextarea = new JTextArea(15, 70);
         inputTextarea.append(sparqlQueryString);
         inputPane = new JScrollPane(inputTextarea);
         submitButton.addActionListener(this);
 
-        outputTextarea = new JTextArea(15, 50);
+        outputTextarea = new JTextArea(15, 70);
         outputPane = new JScrollPane(outputTextarea);
         //inputLabel.addActionListener(this);
 

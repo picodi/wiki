@@ -3,12 +3,15 @@ package parser;
 import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class WikiParser
 {
     public static final String DEFAULT_URL = "name";
     public static final String MESSAGE_NO_SENTENCE_MATCH = "Both keywords were not found in same sentence";
+    public static final String JS_ERROR = "either has JavaScript disabled or does not have any supported player";
     private String url = "";
 
     public WikiParser()
@@ -46,7 +49,9 @@ public class WikiParser
 
                     if (tempString.compareTo("") == 0)
                         continue;
-
+                    if(tempString.contains(JS_ERROR)) {
+                        continue;
+                    }
                     if (tempString.contains(keyword1) && tempString.contains(keyword2)) {
                         finalResults.addAll(getSentancesContainingKeywords(tempString, keyword1, keyword2));
                     }
@@ -70,7 +75,6 @@ public class WikiParser
                 e.printStackTrace();
             }
         }
-
         return finalResults;
     }
 
@@ -102,4 +106,5 @@ public class WikiParser
     {
         return string.replaceAll("<!--.*?-->", "").replaceAll("<[^>]+>", "");
     }
+
 }

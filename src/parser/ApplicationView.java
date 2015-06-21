@@ -30,11 +30,11 @@ public class ApplicationView extends JPanel implements ActionListener
             "             db-owl:wikiPageID ?pageid ;\n" +
             "             prop:areaRank ?arearank.\n" +
             "  \n" +
-            "    FILTER (?arearank > 30 && ?arearank < 50 &&\n" +
+            "    FILTER (?arearank > 30 && ?arearank < 40 &&\n" +
             "            langMatches(lang(?name), \"EN\")) .\n" +
             "} ORDER BY ASC(?arearank)";
 
-    public static ApplicationManager manager = new ApplicationManager();
+    public static ApplicationManager manager = new ApplicationManager(true);
 
     public ApplicationView()
     {
@@ -77,11 +77,11 @@ public class ApplicationView extends JPanel implements ActionListener
         add(outputPanel);
     }
 
-    public void actionPerformed(ActionEvent evt) {
-
+    public void actionPerformed(ActionEvent evt)
+    {
+        outputTextarea.setText("");
         String providedQuery = inputTextarea.getText();
-        manager.executeQuery(providedQuery);
-        outputTextarea.append(providedQuery);
+        outputTextarea.append(manager.executeQuery(providedQuery));
         this.repaint();
     }
 }

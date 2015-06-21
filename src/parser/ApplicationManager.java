@@ -2,13 +2,16 @@ package parser;
 
 
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ApplicationManager
 {
 
     private boolean debugMode;
 
+    public static final String PATH_TO_FILES = "wikipedia_results/";
     private DbpediaFetcher fetcher = new DbpediaFetcher();
     private DbpediaParser parser = new DbpediaParser();
     private UrlExtractor extractor = new UrlExtractor();
@@ -24,7 +27,7 @@ public class ApplicationManager
         setDebugMode(debugMode);
     }
 
-    public void executeQuery(String query)
+    public String executeQuery(String query)
     {
         String fileName = fetcher.executeQuery(query);
         try {
@@ -33,7 +36,7 @@ public class ApplicationManager
                 if (debugMode) {
                     System.err.println("DbpediaFetcher result: empty");
                 }
-                return;
+                return "";
             } else {
                 if (debugMode) {
                     System.out.println("DbpediaFetcher result: not empty");
@@ -56,6 +59,10 @@ public class ApplicationManager
         ArrayList<String> results = new ArrayList<>();
         for (WikiParamSet set : list) {
 
+            if (debugMode) {
+                System.out.println(set.getKeyword1() + " " + set.getKeyword2() + " " + set.getPageId());
+            }
+
             if (set.getKeyword1().compareTo(set.getKeyword2()) != 0) {
                 String page = extractor.getUrlForPageId(set.getPageId());
 
@@ -70,7 +77,8 @@ public class ApplicationManager
             System.out.println("No. results from WikiParser: " + results.size());
         }
 
-        printInFile("wiki-rank.txt", results);
+        printInFile(getFilename(), results);
+        return concat(results);
     }
 
     public void printInFile(String filename, ArrayList<String> data)
@@ -88,6 +96,40 @@ public class ApplicationManager
         }
     }
 
+    public String concat(ArrayList<String> data)
+    {
+        String resultString = "";
+        for (String s : data) {
+            resultString = resultString.concat(s + "\n");
+        }
+        return resultString;
+    }
+
+    /**
+     * Gives the relative path to where the data will be stored
+     *
+     * @return String
+     */
+    public String getFilename()
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss.SSS");
+        Date now = new Date();
+        String fileName = sdf.format(now);
+
+        return formatFilePath(fileName);
+    }
+
+    /**
+     * Returns the path for an XML, whose filename is given as a parameter
+     *
+     * @param fileName
+     *
+     * @return String
+     */
+    public String formatFilePath(String fileName)
+    {
+        return PATH_TO_FILES + fileName + ".xml";
+    }
 
 
     public boolean getDebugMode()

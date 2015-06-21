@@ -13,7 +13,7 @@ import java.util.*;
 
 public class UrlExtractor
 {
-    public static final String WIKI_URL_SKELETON = "http://en.wikipedia.org/w/api.php?action=query&prop=info&inprop=url&format=xml&pageids=";
+    public static final String WIKI_URL_SKELETON = "https://en.wikipedia.org/w/api.php?action=query&prop=info&inprop=url&format=xml&pageids=";
     public static final String WANTED_ATTRIBUTE = "fullurl";
 
     public UrlExtractor()

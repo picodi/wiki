@@ -16,6 +16,7 @@ public class ApplicationManager
     private DbpediaParser parser = new DbpediaParser();
     private UrlExtractor extractor = new UrlExtractor();
     private WikiParser wikiSearch = new WikiParser();
+    private PatternMatcher matcher = new PatternMatcher();
 
     public ApplicationManager()
     {
@@ -77,8 +78,10 @@ public class ApplicationManager
             System.out.println("No. results from WikiParser: " + results.size());
         }
 
-        printInFile(getFilename(), results);
-        return concat(results);
+        String wikiFileName = getFilename();
+        printInFile(wikiFileName, results);
+        String finalResults  = matcher.loadPipeline(wikiFileName);
+        return finalResults;
     }
 
     public void printInFile(String filename, ArrayList<String> data)
@@ -90,6 +93,7 @@ public class ApplicationManager
                 writer.println();
             }
             writer.close();
+            System.out.println("Successfully printed: " + filename);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -128,7 +132,7 @@ public class ApplicationManager
      */
     public String formatFilePath(String fileName)
     {
-        return PATH_TO_FILES + fileName + ".xml";
+        return PATH_TO_FILES + fileName + ".txt";
     }
 
 
